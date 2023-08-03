@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>ProvaWeb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description>Sono un esperimento</description>
+    <display-name>Prova</display-name>
+    <servlet-name>Prova</servlet-name>
+    <servlet-class>it.prova.Prova</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Prova</servlet-name>
+    <url-pattern>/prova</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>Sono il secondo esperimento</description>
+    <display-name>Prova2</display-name>
+    <servlet-name>Prova2</servlet-name>
+    <servlet-class>it.prova.Prova2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Prova2</servlet-name>
+    <url-pattern>/prova2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Prova2</servlet-name>
+    <url-pattern>/prova2a</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Prova2</servlet-name>
+    <url-pattern>/prova2b</url-pattern>
+  </servlet-mapping>
+
+  
+</web-app>
