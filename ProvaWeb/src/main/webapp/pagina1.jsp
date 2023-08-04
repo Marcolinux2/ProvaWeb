@@ -12,17 +12,25 @@
 <p> Ciao, io sono pagina 1 </p>
 
 <%
+
 	out.print (request.getAttribute("PROVOLA") + "<br>");
 	out.print (request.getAttribute("PARAM1") + "<br>");
 	out.print (request.getAttribute("PARAM2") + "<br>");
 	out.print (request.getAttribute("PARAM3") + "<br>");
+	out.print (session.getAttribute("NOME") + "<br>");
+	out.print (session.getAttribute("COGNOME") + "<br>");
+	out.print (session.getId() + "<br>");
 	
-// 	ArrayList list = new ArrayList();
-// 	Iterator it = list.iterator();
-// 	while (it.hasNext()) {
-// 		String object = (String) it.next();
-// 		out.print (object + "<br>");
-// 	}
+	session.setAttribute("NOME", "MARIO");
+	// 	out.print (session.getCreationTime() + "<br>");
+	// 	out.print (session.getLastAccessedTime() + "<br>");
+	
+	// 	ArrayList list = new ArrayList();
+	// 	Iterator it = list.iterator();
+	// 	while (it.hasNext()) {
+	// 		String object = (String) it.next();
+	// 		out.print (object + "<br>");
+	// 	}
 
 %>
 <hr>

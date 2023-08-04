@@ -18,6 +18,12 @@
 	out.print (request.getAttribute("PARAM1") + "<br>");
 	out.print (request.getAttribute("PARAM2") + "<br>");
 	out.print (request.getAttribute("PARAM3") + "<br>");
+	
+	out.print (session.getAttribute("NOME") + "<br>");
+	out.print (session.getAttribute("COGNOME") + "<br>");
+	out.print (session.getId() + "<br>");
+	session.setAttribute("INDIRIZZO", "VIA MAGGI");
+	
 %>
 
 <hr>

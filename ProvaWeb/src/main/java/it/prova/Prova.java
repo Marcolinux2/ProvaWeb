@@ -27,7 +27,6 @@ public class Prova extends HttpServlet {
 		// paradigma MVC
 		response.getWriter().append("Io sono il servlet e rispondo alla GET");
 		// TODO Auto-generated method stub
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/pagina1.jsp");
 		
 		// String name = (String) request.getAttribute("fname");
 		request.setAttribute("PROVOLA", "ALOVORP");
@@ -35,14 +34,42 @@ public class Prova extends HttpServlet {
 		request.setAttribute("PARAM1", "Io sono il parametro UNO");
 		request.setAttribute("PARAM2", "Io sono il parametro DUE");
 		request.setAttribute("PARAM3", "Io sono il parametro TRE");
+		
+		HttpSession session =request.getSession();
+		
+		session.setAttribute("NOME", "Marco");
+		session.setAttribute("COGNOME", "Tripolini");
+		
+		// **************************************
+		// RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/pagina1.jsp");
+		// dispatcher.forward(request, response); 
+		
+		// questa sintassi equivale alle due righe precedenti.
+		getServletContext().getRequestDispatcher("/pagina1.jsp").forward(request, response);
 
 		
-		
-		
-		// **************************************
-		dispatcher.forward(request, response); 
 		// -> forwarding di una request
+		// importante perché io inizio il lavoro in un servlet
+		// e lo completo in una pagina JSP/HTML
 		// **************************************
+		
+		
+		// redirect // redirezione 
+		// response.sendRedirect("sub/pagina3.jsp");
+		
+		// FORWARD:
+			// la requeste viene elaborata lato server
+			// il client non ha percezione  della forward
+			// requeste e response rimangono gli stessi oggetti dopo la forward mantenendo le info aggiunte
+		
+		// REDIRECT
+			// la request viene rediretta a una altro gestore 
+			// il client vede il cambio di URL
+			// viene creata una nuova request con i dati originali
+		
+		
+		
+		
 		
 		
 		// -> redirect 
