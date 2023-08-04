@@ -1,6 +1,8 @@
 package it.prova;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,26 +31,15 @@ public class Prova2 extends HttpServlet {
 		response.getWriter().append("Io sono la classe Prova2");
 		HttpSession session = request.getSession();
 		
-		String nome = request.getParameter("fname");
-		String cognome = request.getParameter("fname");
-		String indirizzo = request.getParameter("fname");
-		String telefono = request.getParameter("fname");
-
-		// -> validazione lato client
-		// dati non nulli
-		// -> validazione lato server 
-		// verifiche formali
-		
-		// se i dati non sono correttamente compilati -> messaggio opportuno
-
-		// altrimenti li inseriamo
-		// altrimenti li inseriamo
-		
-		// Nome e Cognome 
-		
-		
 		String variabile = (String) session.getAttribute("VARIABILEDIPROVA");
 		System.out.println(variabile);
+		
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/pagina1.jsp");
+		
+		
+		
+		
+		
 	}
 
 	/**
