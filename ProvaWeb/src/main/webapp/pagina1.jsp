@@ -27,6 +27,12 @@
 %>
 <hr>
 	<a href="pagina2.jsp" > pagina 2</a> <br>
+	
+	<form action="pagina2.jsp" method="GET">
+		<input type="text" id="p1" name="p1" value="Parametro 1"><br>
+		<input type="text" id="p2" name="p2" value="Parametro 2"><br><br>
+		<input type="submit" value="Submit">
+	</form> 
 
 </body>
 </html>
