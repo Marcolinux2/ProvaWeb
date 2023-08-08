@@ -24,11 +24,18 @@ public class Prova extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// paradigma MVC
+		doPost(request, response) ;		
 		response.getWriter().append("Io sono il servlet e rispondo alla GET");
 		// TODO Auto-generated method stub
 		
 		// String name = (String) request.getAttribute("fname");
+		
+		String nome1 = request.getParameter("nome1");
+		String cognome1 = request.getParameter("cognome1");
+
+		String nome2 = request.getParameter("nome2");
+		String cognome2 = request.getParameter("cognome2");
+
 		request.setAttribute("PROVOLA", "ALOVORP");
 
 		request.setAttribute("PARAM1", "Io sono il parametro UNO");
@@ -45,7 +52,7 @@ public class Prova extends HttpServlet {
 		// dispatcher.forward(request, response); 
 		
 		// questa sintassi equivale alle due righe precedenti.
-		getServletContext().getRequestDispatcher("/pagina1.jsp").forward(request, response);
+		// getServletContext().getRequestDispatcher("/pagina1.jsp").forward(request, response);
 
 		
 		// -> forwarding di una request
@@ -62,17 +69,12 @@ public class Prova extends HttpServlet {
 			// il client non ha percezione  della forward
 			// requeste e response rimangono gli stessi oggetti dopo la forward mantenendo le info aggiunte
 		
-		// REDIRECT
-			// la request viene rediretta a una altro gestore 
-			// il client vede il cambio di URL
-			// viene creata una nuova request con i dati originali
-		
-		
-		
-		
-		
-		
-		// -> redirect 
+			// REDIRECT
+				// la request viene rediretta a una altro gestore 
+				// il client vede il cambio di URL
+				// viene creata una nuova request con i dati originali
+			
+				// -> redirect 
 	}
 
 	/**
@@ -81,8 +83,12 @@ public class Prova extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		// doGet(request, response);
-		response.getWriter().append("Io sono il servlet e rispondo alla POST");
+		// response.getWriter().append("Io sono il servlet e rispondo alla POST");
 		
+		String nome1 = request.getParameter("nome1");
+		String cognome1 = request.getParameter("cognome1");
+	
+		String nome2 = request.getParameter("nome2");
+		String cognome2 = request.getParameter("cognome2");
 	}
-
 }
