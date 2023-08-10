@@ -13,10 +13,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import it.prova.cart.Cart;
+import it.prova.interfaces.Constants;
+
 /**
  * Servlet implementation class Prova
  */
-public class Prova extends HttpServlet {
+public class Prova extends HttpServlet implements Constants {
 	private static final long serialVersionUID = 1L;
     private String message;
     
@@ -47,6 +50,11 @@ public class Prova extends HttpServlet {
 		session.setAttribute("NOME", "Marco");
 		session.setAttribute("COGNOME", "Tripolini");
 		
+		Cart c = new Cart();
+		
+		session.setAttribute(CART, c);
+		
+		
 		// **************************************
 		// RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/pagina1.jsp");
 		// dispatcher.forward(request, response); 
@@ -75,6 +83,8 @@ public class Prova extends HttpServlet {
 				// viene creata una nuova request con i dati originali
 			
 				// -> redirect 
+		
+	
 	}
 
 	/**
