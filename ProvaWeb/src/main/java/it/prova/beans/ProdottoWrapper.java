@@ -24,4 +24,11 @@ public class ProdottoWrapper {
 	public void setQuantita(Integer quantita) {
 		this.quantita = quantita;
 	}
+	
+	// Provola 001
+	// Provola 001
+	// Provola 001
+	// Provola 001
+	// Provola 001
+	
 }

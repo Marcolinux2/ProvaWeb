@@ -51,4 +51,7 @@ public class Prodotto {
 	public void setImmagine(String immagine) {
 		this.immagine = immagine;
 	}
+	
+	// io sono una nuova commit;
+	
 }
